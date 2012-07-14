@@ -8,7 +8,7 @@ defined('_JEXEC') or die('Restricted access');
   JToolBarHelper::deleteList();
   JToolBarHelper::editListX();
   JToolBarHelper::addNewX();
-  JToolBarHelper::preferences('com_instaimages', '550');  
+  JToolBarHelper::preferences('com_instaimages', '550', '570', 'Instagram Settings');  
 ?>
 
 <form action="index.php?option=com_instaimages&amp;view=settings" method="post" name="adminForm">

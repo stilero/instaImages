@@ -3,27 +3,70 @@
     <params>
         <param name="example" type="text" default="example" label="Example" description="You can change this in components backend in the config.xml" />
     </params>
+    <fieldset name="instagram_settings" label="COM_INSTAIMAGES_SETTINGS" addfieldpath="/administrator/components/com_instaimages/elements">
+        <field 
+            name="instructions_code" 
+            type="instructions" 
+            label="instructions"
+        />
+        <field 
+            name="client_id" 
+            type="text" default="" 
+            label="COM_INSTAIMAGES_CLIENT_ID" 
+            description="COM_INSTAIMAGES_CLIENT_ID_DESC" 
+        />
+        <field 
+            name="client_secret" 
+            type="text" default="" 
+            label="COM_INSTAIMAGES_CLIENT_SECRET" 
+            description="COM_INSTAIMAGES_CLIENT_SECRET_DESC" 
+        />
+        <field 
+            name="redirect_uri" 
+            type="redirecturi" 
+            default="" 
+        />
+       <field 
+            name="authorize" 
+            type="authorize" 
+            default="" 
+            label="" 
+            description="" 
+        />
+        <field 
+            name="auth_code" 
+            type="hidden" 
+            default="" 
+        />
+        <field 
+            name="access_token" 
+            type="hidden" 
+            default="" 
+        />
+        <field 
+            name="base_uri" 
+            type="baseuri" 
+            default="" 
+        />
+        <field 
+            name="helpers_uri" 
+            type="helpersuri" 
+        />
+    </fieldset>	   
     <fieldset
-        name="Common"
-        label="Common"
-        description="Common"
+        name="permissions"
+        label="JCONFIG_PERMISSIONS_LABEL"
+        description="JCONFIG_PERMISSIONS_DESC"
     >
-        <field name="example" type="text" default="example" label="Example" description="You can change this in components backend in the config.xml"  />
-    </fieldset>		   
-	<fieldset
-            name="permissions"
+        <field
+            name="rules"
+            type="rules"
             label="JCONFIG_PERMISSIONS_LABEL"
-            description="JCONFIG_PERMISSIONS_DESC"
-        >
-            <field
-                name="rules"
-                type="rules"
-                label="JCONFIG_PERMISSIONS_LABEL"
-                class="inputbox"
-                validate="rules"
-                filter="rules"
-                component="com_instaimages"
-                section="component" 
-            />
-	</fieldset>	
+            class="inputbox"
+            validate="rules"
+            filter="rules"
+            component="com_instaimages"
+            section="component" 
+        />
+    </fieldset>	
 </config>

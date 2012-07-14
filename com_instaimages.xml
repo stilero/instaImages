@@ -56,9 +56,9 @@
                 <folder>tables</folder>
                 <folder>views</folder>									
             </files>	
-        <languages folder="admin">
-            <language tag="en-GB">language/en-GB.com_instaimages.ini</language>
-            <language tag="en-GB">language/en-GB.com_instaimages.sys.ini</language>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB.com_instaimages.ini</language>
+            <language tag="en-GB">en-GB.com_instaimages.sys.ini</language>
         </languages>		
     </administration>
 </install>
