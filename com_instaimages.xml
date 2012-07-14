@@ -1,0 +1,64 @@
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD component 1.0//EN" "http://joomla.org/xml/dtd/1.5/component-install.dtd">
+<install type="component" method="upgrade" version="1.5.0">
+    <name>Instaimages</name>
+    <creationDate>2012-07-14</creationDate>
+    <author>Daniel Eliasson Stilero Webdesign</author>
+    <authorEmail>joomla@stilero.com</authorEmail>
+    <authorUrl>http://www.stilero.com</authorUrl>
+    <copyright>Copyright (C) 2012 Daniel Eliasson Stilero Webdesign. All rights reserved.</copyright>	
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>0.1</version>
+    <description>A component for adding Instagram images to Joomla articles</description>
+    <installfile></installfile>
+    <uninstallfile></uninstallfile>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <filename>instaimages.php</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>			
+        <filename>router.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>assets</folder>			
+    </files>	
+    <languages folder="site">
+            <language tag="en-GB">language/en-GB.com_instaimages.ini</language>
+    </languages>
+    <administration>
+        <menu link="index.php?option=com_instaimages">Instaimages</menu>
+            <submenu>
+                <menu  link="option=com_instaimages&amp;view=imagepicker">Imagepicker</menu>
+            </submenu>
+            <files folder="admin">
+                <filename>config.xml</filename>
+                <filename>admin.instaimages.php</filename>
+                <filename>controller.php</filename>
+                <filename>index.html</filename>
+                <filename>access.xml</filename>			
+                <folder>assets</folder>
+                <folder>elements</folder>		
+                <folder>joomla</folder>						
+                <folder>controllers</folder>
+                <folder>helpers</folder>
+                <folder>models</folder>
+                <folder>sql</folder>			
+                <folder>tables</folder>
+                <folder>views</folder>									
+            </files>	
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB.com_instaimages.ini</language>
+            <language tag="en-GB">language/en-GB.com_instaimages.sys.ini</language>
+        </languages>		
+    </administration>
+</install>
