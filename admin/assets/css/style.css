@@ -1,0 +1,13 @@
+/* 
+    Document   : style
+    Created on : 2012-jul-15, 22:41:29
+    Author     : Daniel Eliasson - joomla at stilero.com
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.instaimage { 
+    float: left;
+    margin: 1em;
+}
+

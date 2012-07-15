@@ -19,18 +19,10 @@ class InstaimagesViewImagepicker  extends JView {
 	{
             $app = &JFactory::getApplication('');
             $lang	= JFactory::getLanguage();
-            $document =& JFactory::getDocument();
-            JHtml::_('behavior.framework', true);
-            $assetsPath =  JURI::base().'components'.DS.'com_instaimages'.DS.'assets'.DS;
-            $jsPath =  $assetsPath.'js'.DS;
-            $cssPath =  $assetsPath.'css'.DS;
-            $document->addScript($jsPath.'imagepicker.js');
-            $document->addStyleSheet($cssPath.'style.css');
             $params = & JComponentHelper::getParams('com_instaimages');
-            
             $images = & $this->get('UserImages');
             $this->assignRef( 'images', $images);
-            parent::display();
+            parent::display('raw');
 	}
 	
 }

@@ -59,6 +59,9 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         }
         
         protected function getLabel(){
+            $language =& JFactory::getLanguage();
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $toolTip = JText::_(COM_INSTAIMAGES_REDIRECT_URI_DESC);
             $text = JText::_(COM_INSTAIMAGES_REDIRECT_URI);
             $labelHTML = '<label id="'.$this->id.'-lbl" for="'.$this->id.'" class="hasTip" title="'.$text.'::'.$toolTip.'">'.$text.' <small>('.JTEXT::_(COM_INSTAIMAGES_REDIRECT_URI_SMALL).')</small></label>';

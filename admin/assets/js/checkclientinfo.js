@@ -4,7 +4,7 @@ window.addEvent('domready', function(){
     var clientSecret = $('jform_client_secret').value;
     var redirectURI = $('jform_redirect_uri').value;
     var authCode = $('jform_auth_code').value;
-    var catcherURI = $('jform_helpers_uri').value;
+    var catcherURI = $('jform_helpers_uri').value + 'catcher.php';
 
     var sendVars;
         
@@ -43,25 +43,51 @@ window.addEvent('domready', function(){
     var requestAccessToken = function(){
         authCode = $('jform_auth_code').value;
         var reqUrl = $('jform_helpers_uri').value + 'authorizer.php';
+        //reqUrl = decodeURIComponent(reqUrl.replace(/\+/g, ' ')) + 'authtoken';
         sendVars = 'client_id=' + clientID +
             '&client_secret=' + clientSecret +
             '&grant_type=authorization_code' +
             '&code=' + authCode +
-            '&redirect_uri=' + redirectURI;
+            //'&redirect_uri=' + redirectURI;
+            '&redirect_uri=' + catcherURI;
         var myRequest = new Request.JSON({
             url: reqUrl,
             method: 'post',
-            data:{'client_id': clientID,
+            data:{
+                'client_id': clientID,
                 'client_secret': clientSecret,
                 'grant_type': 'authorization_code',
                 'code': authCode,
                 'redirect_uri': catcherURI
             },
             onSuccess: function(responseText){
+                //alert('success');
                 handleResponse(responseText);
             },
             onFailure: function(responseText){
+                //alert('failure');
                 alert(COM_INSTAIMAGES_JS_FAILURE + responseText.status);
+            },
+            onError: function(responseText, respError){
+                //alert('error occured');
+                //alert(responseText);
+                //alert(respError);
+                handleResponse(responseText);
+            },
+            onRequest: function(){
+                //alert('request started');
+            },
+            onException: function(){
+                //alert('Exception occured');
+            },
+            onComplete: function(){
+                //alert('request completed');
+            },
+            onTimeout: function(){
+                //alert('request timed out');
+            },
+            onProgress: function(){
+                //alert('progress started');
             }
         });
         

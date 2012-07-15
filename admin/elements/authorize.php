@@ -64,8 +64,8 @@ if(version_compare(JVERSION, '1.6.0', '<')){
             JHTML::_('behavior.modal', 'a.lightbox');
             $document =& JFactory::getDocument();
             $language =& JFactory::getLanguage();
-            $language->load('mod_instagram', JPATH_ADMINISTRATOR, 'en-GB', true);
-            $language->load('mod_instagram', JPATH_ADMINISTRATOR, null, true);
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $assetsPath = JURI::root(true).'/administrator/components/com_instaimages/assets/';
             $this->config = array(
                 'jsAsset'       =>      'js/checkclientinfo.js',
@@ -77,8 +77,11 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         }
         
         protected function getLabel(){
-            $toolTip = JText::_(MOD_INSTAGRAM_INSTRUCTIONS_DESC);
-            $text = JText::_(MOD_INSTAGRAM_INSTRUCTIONS_LABEL);
+            $language =& JFactory::getLanguage();
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
+            $toolTip = JText::_(COM_INSTAIMAGES_INSTRUCTIONS_DESC);
+            $text = JText::_(COM_INSTAIMAGES_INSTRUCTIONS_LABEL);
             $labelHTML = '<label id="'.$this->id.'-lbl" for="'.$this->id.'" class="hasTip" title="'.$text.'::'.$toolTip.'">'.$text.'</label>';
             return ;
         }
@@ -93,24 +96,30 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         private function instructions(){
             $htmlCode =
                 '<span class="readonly mod-desc">'.
-                    JText::_('MOD_INSTAGRAM_AUTHORIZE_INSTR').
+                    JText::_('COM_INSTAIMAGES_AUTHORIZE_INSTR').
                     '</span>';
             return $htmlCode;
         }
         */
         private function addTranslationJS(){
+            $language =& JFactory::getLanguage();
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $document =& JFactory::getDocument();
-            $jsTranslationStrings = 'var MOD_INSTAGRAM_JS_SUCCESS = "'.JText::_(MOD_INSTAGRAM_JS_SUCCESS).'";';
-            $jsTranslationStrings .= 'var MOD_INSTAGRAM_JS_FAILURE = "'.JText::_(MOD_INSTAGRAM_JS_FAILURE).'";';
+            $jsTranslationStrings = 'var COM_INSTAIMAGES_JS_SUCCESS = "'.JText::_(COM_INSTAIMAGES_JS_SUCCESS).'";';
+            $jsTranslationStrings .= 'var COM_INSTAIMAGES_JS_FAILURE = "'.JText::_(COM_INSTAIMAGES_JS_FAILURE).'";';
             $document->addScriptDeclaration($jsTranslationStrings);        
         }
         
         private function connectButton($id){
+            $language =& JFactory::getLanguage();
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $buttonImage = $this->config['images'].'connect-button.png';
             $htmlCode = 
                     '<a '.
                     'id="'.$id.'" '.
-                    'title="'.JText::_('MOD_INSTAGRAM_AUTHORIZE').'" '.
+                    'title="'.JText::_('COM_INSTAIMAGES_AUTHORIZE').'" '.
                     'href="'.$link.'" '.
                     'target="_blank" >'.
                     '<img src="'.$buttonImage.'" />'.

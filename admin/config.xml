@@ -35,12 +35,12 @@
         />
         <field 
             name="auth_code" 
-            type="hidden" 
+            type="text" 
             default="" 
         />
         <field 
             name="access_token" 
-            type="hidden" 
+            type="text" 
             default="" 
         />
         <field 

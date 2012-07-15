@@ -32,6 +32,18 @@ class InstaimagesHelper
 			'index.php?option=com_instaimages&view=imagepicker',
 			($vName == 'imagepicker')
 		);
+                
+                JSubMenuHelper::addEntry(
+			JText::_('Userimages'),
+			'index.php?option=com_instaimages&view=userimages',
+			($vName == 'userimages')
+		);
+                
+                JSubMenuHelper::addEntry(
+			JText::_('Images'),
+			'index.php?option=com_instaimages&view=images',
+			($vName == 'images')
+		);
 
 	}
 	

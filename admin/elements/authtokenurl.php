@@ -53,8 +53,9 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         protected $type = 'helpersuri';
 
         protected function getInput(){
-            $authCodeCatcherURI = JURI::root().'administrator'.DS.'components'.DS.'com_instaimages'.DS.'helpers'.DS;
-            $htmlCode = '<input type="hidden" id="'.$this->id.'" name="'.$this->name.'" value="'.$authCodeCatcherURI.'"/>';
+            $authCodeCatcherURI = JURI::root().'administrator/index.php?option=com_instaimages&format=raw&view=';
+            $authCodeCatcherURI = $authCodeCatcherURI;
+            $htmlCode = '<input type="text" id="'.$this->id.'" name="'.$this->name.'" value="'.$authCodeCatcherURI.'"/>';
             return $htmlCode;
         }
         
