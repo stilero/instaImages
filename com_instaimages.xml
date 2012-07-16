@@ -32,8 +32,10 @@
         <folder>views</folder>
         <folder>assets</folder>			
     </files>	
-    <languages folder="site">
-            <language tag="en-GB">language/en-GB.com_instaimages.ini</language>
+    <languages folder="admin/language">
+            <language tag="en-GB">en-GB.com_instaimages.ini</language>
+            <language tag="en-GB">en-GB.com_instaimages.sys.ini</language>
+
     </languages>
     <administration>
         <menu link="index.php?option=com_instaimages">Instaimages</menu>

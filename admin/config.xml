@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <config>
-    <params>
-        <param name="example" type="text" default="example" label="Example" description="You can change this in components backend in the config.xml" />
-    </params>
-    <fieldset name="instagram_settings" label="COM_INSTAIMAGES_SETTINGS" addfieldpath="/administrator/components/com_instaimages/elements">
+    <fieldset 
+        name="instagram_settings" 
+        label="COM_INSTAIMAGES_SETTINGS" 
+        addfieldpath="/administrator/components/com_instaimages/elements"
+    >
         <field 
             name="instructions_code" 
             type="instructions" 

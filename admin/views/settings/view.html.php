@@ -17,9 +17,9 @@ class InstaimagesViewSettings  extends JView {
 
 	public function display($tpl = null) 
 	{
-            $language =& JFactory::getLanguage();
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
+            //$language =& JFactory::getLanguage();
+            //$language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+            //$language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
 		$app = &JFactory::getApplication('');
 		
 		if ($this->getLayout() == 'form') {
