@@ -62,17 +62,26 @@ if(version_compare(JVERSION, '1.6.0', '<')){
 
         protected function getInput(){
             //JHTML::_('behavior.modal', 'a.modal');
-            $linktext = JText::_(COM_INSTAIMAGES_INSTRUCTIONS);
+            $linktext = JText::_('Register your Application.');
             $instagramURI = 'http://instagram.com/developer/clients/register/';
             //$handler = ' rel="'. "{handler: 'iframe', size:{ x:800, y:650}}".'"';
             //$class = ' class="modal"';
-            $htmlCode = '<a id="'.$this->id.'"'.$class.' target="_blank"'.$handler.' href="'.$instagramURI.'" title="'.$linktext.'">'.$linktext.'</a>';
+            $htmlCode = 
+                    '<div class="width-100 fltlft">'.
+                    '<div class="blank">'.
+                    '<a id="'.$this->id.'"'.$class.' target="_blank"'.$handler.' href="'.$instagramURI.'" title="'.$linktext.'">'.
+                        $linktext.
+                    '</a>'.
+                    '</div>'.
+                    '</div>'
+                    ;
             return $htmlCode;
         }
         
         protected function getLabel(){
-            $toolTip = JText::_(COM_INSTAIMAGES_INSTRUCTIONS_DESC);
-            $text = JText::_(COM_INSTAIMAGES_INSTRUCTIONS_LABEL);
+            
+            $toolTip = JText::_('Register your application and create an Instagram Client to use the Instagram API.');
+            $text = JText::_('First step');
             $labelHTML = '<label id="'.$this->id.'-lbl" class="hasTip" title="'.$text.'::'.$toolTip.'" for="'.$this->id.'">'.$text.'</label>';
             return $labelHTML;
         }

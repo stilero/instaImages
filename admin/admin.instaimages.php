@@ -29,7 +29,8 @@ $jv = new JVersion();
 $GLOBALS['alt_libdir'] = ($jv->RELEASE < 1.6) ? JPATH_COMPONENT_ADMINISTRATOR : null;
 
 //set the default view
-$controller = JRequest::getWord('view', 'settings');
+$controller = JRequest::getWord('view', 'recentimages');
+//$controller = JRequest::getWord('view', 'settings');
 
 //add submenu for 1.6
 if ($jv->RELEASE > 1.5) {

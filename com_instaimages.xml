@@ -9,39 +9,21 @@
     <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
     <version>0.1</version>
     <description>A component for adding Instagram images to Joomla articles</description>
-    <installfile></installfile>
-    <uninstallfile></uninstallfile>
-    <install>
-        <sql>
-            <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
-        </sql>
-    </install>
-    <uninstall>
-        <sql>
-            <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
-        </sql>
-    </uninstall>
-    <files folder="site">
-        <filename>instaimages.php</filename>
-        <filename>controller.php</filename>
-        <filename>index.html</filename>			
-        <filename>router.php</filename>
-        <folder>controllers</folder>
-        <folder>helpers</folder>
-        <folder>models</folder>
-        <folder>views</folder>
-        <folder>assets</folder>			
-    </files>	
+    <media destination="instaimages" folder="media/instaimages">
+        <folder>assets</folder>
+    </media>
     <languages folder="admin/language">
             <language tag="en-GB">en-GB.com_instaimages.ini</language>
             <language tag="en-GB">en-GB.com_instaimages.sys.ini</language>
 
     </languages>
     <administration>
-        <menu link="index.php?option=com_instaimages">Instaimages</menu>
+        <menu img="../media/instaimages/assets/images/instaimages-16x16.png" link="index.php?option=com_instaimages">InstaImages</menu>
+            <!--
             <submenu>
                 <menu  link="option=com_instaimages&amp;view=imagepicker">Imagepicker</menu>
             </submenu>
+            -->
             <files folder="admin">
                 <filename>config.xml</filename>
                 <filename>admin.instaimages.php</filename>
@@ -50,13 +32,10 @@
                 <filename>access.xml</filename>			
                 <folder>assets</folder>
                 <folder>elements</folder>		
-                <folder>joomla</folder>						
                 <folder>controllers</folder>
                 <folder>helpers</folder>
                 <folder>lib</folder>
                 <folder>models</folder>
-                <folder>sql</folder>			
-                <folder>tables</folder>
                 <folder>views</folder>									
             </files>	
         <languages folder="admin/language">

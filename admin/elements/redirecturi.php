@@ -54,17 +54,14 @@ if(version_compare(JVERSION, '1.6.0', '<')){
 
         protected function getInput(){
             $moduleAbsPath = JURI::root();
-            $htmlCode = '<input type="text" size="30" id="'.$this->id.'" name="'.$this->name.'" value="'.$moduleAbsPath.'"/>';
+            $htmlCode = '<input type="text" size="100%" id="'.$this->id.'" name="'.$this->name.'" value="'.$moduleAbsPath.'"/>';
             return $htmlCode;
         }
         
         protected function getLabel(){
-            $language =& JFactory::getLanguage();
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
-            $toolTip = JText::_(COM_INSTAIMAGES_REDIRECT_URI_DESC);
-            $text = JText::_(COM_INSTAIMAGES_REDIRECT_URI);
-            $labelHTML = '<label id="'.$this->id.'-lbl" for="'.$this->id.'" class="hasTip" title="'.$text.'::'.$toolTip.'">'.$text.' <small>('.JTEXT::_(COM_INSTAIMAGES_REDIRECT_URI_SMALL).')</small></label>';
+            $toolTip = JText::_("The Redirect URI to copy and paste during client registration on Instagram. Don't change this value unless you know what you're doing.");
+            $text = JText::_('Redirect URI');
+            $labelHTML = '<label id="'.$this->id.'-lbl" for="'.$this->id.'" class="hasTip" title="'.$text.'::'.$toolTip.'">'.$text.' <small>('.JTEXT::_('Copy This').')</small></label>';
             return $labelHTML;        }
     }//End Class
 }

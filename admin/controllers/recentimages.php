@@ -18,12 +18,12 @@ jimport('joomla.application.component.controller');
  * @package    Instaimages
  * @subpackage Controllers
  */
-class InstaimagesControllerSettings extends InstaimagesController
+class InstaimagesControllerRecentimages extends InstaimagesController
 {
 	/**
 	 * Constructor
 	 */
-	protected $_viewname = 'settings'; 
+	protected $_viewname = 'recentimages'; 
 	 
 	public function __construct($config = array ()) 
 	{

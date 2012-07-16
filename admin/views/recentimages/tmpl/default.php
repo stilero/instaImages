@@ -2,7 +2,8 @@
 
 // no direct access
 defined('_JEXEC') or die('Restricted access');
-JToolBarHelper::title( JText::_( 'Images' ), 'mediamanager.png' );
+JToolBarHelper::title( JText::_( 'Recent Images' ), 'mediamanager.png' );
+JToolBarHelper::preferences('com_instaimages', '550', '570', 'Settings');  
 ?>
 <div class="contentpane">
 	<?php 
@@ -15,8 +16,7 @@ JToolBarHelper::title( JText::_( 'Images' ), 'mediamanager.png' );
             }
             if(!empty($image)){
                 print '<div class="instaimagecont">';
-                print '<a class="instaimage" href="'.$image['full'].'" title="'.$image['caption'].'" ><img src="'.$image['thumb'].'" alt="image1" height="'.$imageThumbSize.'" width="'.$imageThumbSize.'" /></a>
-';
+                print '<a class="instaimage modal" href="'.$image['full'].'" title="'.$image['caption'].'" ><img data-src="'.$image['thumb'].'" src="#" alt="image1" height="'.$imageThumbSize.'" width="'.$imageThumbSize.'" /></a>';
                 print '</div>';
             }
          } 

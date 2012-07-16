@@ -77,13 +77,11 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         }
         
         protected function getLabel(){
-            $language =& JFactory::getLanguage();
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
-            $toolTip = JText::_(COM_INSTAIMAGES_INSTRUCTIONS_DESC);
-            $text = JText::_(COM_INSTAIMAGES_INSTRUCTIONS_LABEL);
+  
+            $toolTip = JText::_('Connect with Instagram');
+            $text = JText::_('Connect');
             $labelHTML = '<label id="'.$this->id.'-lbl" for="'.$this->id.'" class="hasTip" title="'.$text.'::'.$toolTip.'">'.$text.'</label>';
-            return ;
+            return $labelHTML;
         }
         /*
         private function getParams(){
@@ -102,28 +100,27 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         }
         */
         private function addTranslationJS(){
-            $language =& JFactory::getLanguage();
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $document =& JFactory::getDocument();
-            $jsTranslationStrings = 'var COM_INSTAIMAGES_JS_SUCCESS = "'.JText::_(COM_INSTAIMAGES_JS_SUCCESS).'";';
-            $jsTranslationStrings .= 'var COM_INSTAIMAGES_JS_FAILURE = "'.JText::_(COM_INSTAIMAGES_JS_FAILURE).'";';
+            $jsTranslationStrings = 'var COM_INSTAIMAGES_JS_SUCCESS = "'.JText::_('App Connected to Instagram. Save to Complete Settings.').'";';
+            $jsTranslationStrings .= 'var COM_INSTAIMAGES_JS_FAILURE = "'.JText::_('Instagram Authorization failed with the following error').'";';
             $document->addScriptDeclaration($jsTranslationStrings);        
         }
         
         private function connectButton($id){
-            $language =& JFactory::getLanguage();
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
-            $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $buttonImage = $this->config['images'].'connect-button.png';
             $htmlCode = 
+                    '<div class="width-100 fltlft">'.
+                    '<div class="blank">'.
                     '<a '.
                     'id="'.$id.'" '.
-                    'title="'.JText::_('COM_INSTAIMAGES_AUTHORIZE').'" '.
+                    'title="'.JText::_('Authorize App').'" '.
                     'href="'.$link.'" '.
                     'target="_blank" >'.
                     '<img src="'.$buttonImage.'" />'.
-                    '</a>';
+                    '</a>'.
+                    '</div>'.
+                    '</div>'
+                    ;
             return $htmlCode;
         }
     }//End Class

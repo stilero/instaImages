@@ -13,27 +13,16 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.view');
  
  
-class InstaimagesViewImagepicker  extends JView {
+class InstaimagesViewRecentimages  extends JView {
 
 	public function display($tpl = null) 
 	{
             $app = &JFactory::getApplication('');
             $lang	= JFactory::getLanguage();
-            $document =& JFactory::getDocument();
-            JHtml::_('behavior.framework', true);
-            $assetsPath =  JURI::base().'components'.DS.'com_instaimages'.DS.'assets'.DS;
-            $jsPath =  $assetsPath.'js'.DS;
-            $cssPath =  $assetsPath.'css'.DS;
-            $document->addScript($jsPath.'imagepicker.js');
-            $document->addStyleSheet($cssPath.'style.css');
             $params = & JComponentHelper::getParams('com_instaimages');
-            $accessToken = $params->get('access_token');
-            if($accessToken == ""){
-                parent::display('error');
-            }
             $images = & $this->get('UserImages');
             $this->assignRef( 'images', $images);
-            parent::display();
+            parent::display('raw');
 	}
 	
 }

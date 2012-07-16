@@ -2,7 +2,7 @@
 <config>
     <fieldset 
         name="instagram_settings" 
-        label="COM_INSTAIMAGES_SETTINGS" 
+        label="Instagram Settings" 
         addfieldpath="/administrator/components/com_instaimages/elements"
     >
         <field 
@@ -11,21 +11,25 @@
             label="instructions"
         />
         <field 
-            name="client_id" 
-            type="text" default="" 
-            label="COM_INSTAIMAGES_CLIENT_ID" 
-            description="COM_INSTAIMAGES_CLIENT_ID_DESC" 
-        />
-        <field 
-            name="client_secret" 
-            type="text" default="" 
-            label="COM_INSTAIMAGES_CLIENT_SECRET" 
-            description="COM_INSTAIMAGES_CLIENT_SECRET_DESC" 
-        />
-        <field 
             name="redirect_uri" 
             type="redirecturi" 
             default="" 
+        />
+        <field 
+            name="client_id" 
+            type="text" default="" 
+            label="Client ID" 
+            size="100%" 
+            required="true" 
+            description="The Client ID you received from the Instagram API." 
+        />
+        <field 
+            name="client_secret" 
+            type="password" default="" 
+            required="true" 
+            size="100%" 
+            label="Client Secret" 
+            description="The Client Secret you received from the Instagram API." 
         />
        <field 
             name="authorize" 
@@ -36,12 +40,12 @@
         />
         <field 
             name="auth_code" 
-            type="text" 
+            type="hidden" 
             default="" 
         />
         <field 
             name="access_token" 
-            type="text" 
+            type="hidden" 
             default="" 
         />
         <field 
