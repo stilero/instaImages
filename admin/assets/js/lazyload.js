@@ -1,5 +1,4 @@
 /*
- *  @Copyright
  *  @package     Imagepreloader
  *  @author      Daniel Eliasson {@link http://www.stilero.com}
  *  @version     1.0 - 16-Jul-2012

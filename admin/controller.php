@@ -1,11 +1,11 @@
 <?php
 /**
  * @version		$Id:controller.php 1 2012-07-14Z  $
- * @author	   	
  * @package    Instaimages
  * @subpackage Controllers
  * @copyright  	Copyright (C) 2012, . All rights reserved.
- * @license 
+ * @author     Daniel Eliasson Stilero Webdesign
+ * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 // no direct access

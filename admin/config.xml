@@ -2,7 +2,7 @@
 <config>
     <fieldset 
         name="instagram_settings" 
-        label="Instagram Settings" 
+        label="COM_INSTAIMAGES_FIELDSET_CONFIG_INSTAGRAM_SETTINGS_LABEL" 
         addfieldpath="/administrator/components/com_instaimages/elements"
     >
         <field 

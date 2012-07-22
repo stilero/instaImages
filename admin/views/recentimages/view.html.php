@@ -1,10 +1,10 @@
 <?php 
 /**
-* @version		$Id: view.html.php 111 2012-02-24 18:37:06Z michel $
-* @package		Instaimages
-* @subpackage 	Views
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-jul-10 Stilero Webdesign http://www.stilero.com
+* @category Views
+* @license    GPLv2
 */
 
 // no direct access
@@ -22,10 +22,9 @@ class InstaimagesViewRecentimages  extends JView {
             $document =& JFactory::getDocument();
             JHtml::_('behavior.framework');
             JHtml::_('behavior.framework', true);
-            $assetsPath = JURI::root( true ).'/administrator/components/com_instaimages/assets/';
-            $jsLazyLoad =  $assetsPath.'js/lazyload.js';
-            $cssMain = $assetsPath.'css/style.css';
-//            $jsPath =  $assetsPath.'js'.DS;
+            define('ASSETS_URI', JURI::root( true ).'/administrator/components/com_instaimages/assets/');
+            $jsLazyLoad =  ASSETS_URI.'js/lazyload.js';
+            $cssMain = ASSETS_URI.'css/style.css';
             $document->addScript($jsLazyLoad);
             $document->addStyleSheet($cssMain);
             $params = & JComponentHelper::getParams('com_instaimages');

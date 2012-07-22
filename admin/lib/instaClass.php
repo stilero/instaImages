@@ -22,6 +22,11 @@
 * along with instaClass.  If not, see <http://www.gnu.org/licenses/>.
 *
 */
+
+// No direct access
+defined('_JEXEC') or die;
+
+
 class instaClass {
     var $clientId;
     var $clientSecret;

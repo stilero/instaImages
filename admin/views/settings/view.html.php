@@ -1,10 +1,10 @@
 <?php
 /**
-* @version		$Id:settings.php 1 2012-07-14 21:24:50Z  $
-* @package		Instaimages
-* @subpackage 	Tables
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-jul-10 Stilero Webdesign http://www.stilero.com
+* @category Views
+* @license    GPLv2
 */
 
 // no direct access
@@ -17,9 +17,9 @@ class InstaimagesViewSettings  extends JView {
 
 	public function display($tpl = null) 
 	{
-            //$language =& JFactory::getLanguage();
-            //$language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
-            //$language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
+                $language = JFactory::getLanguage();
+                $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+                $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
 		$app = &JFactory::getApplication('');
 		
 //		if ($this->getLayout() == 'form') {

@@ -1,8 +1,15 @@
 <?php
+/**
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-jul-10 Stilero Webdesign http://www.stilero.com
+* @category Views
+* @license    GPLv2
+*/ 
 
 // no direct access
 defined('_JEXEC') or die('Restricted access');
-$assetsPath = JURI::root( true ).'/administrator/components/com_instaimages/assets/';
+define('ASSETS_URI', JURI::root( true ).'/administrator/components/com_instaimages/assets/');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" >
@@ -11,9 +18,9 @@ $assetsPath = JURI::root( true ).'/administrator/components/com_instaimages/asse
         <?php
         $document =& JFactory::getDocument();
         //JHtml::_('behavior.framework', true);
-        $jsImgPicker =  $assetsPath.'js/imagepicker.js';
-        $jsLazyLoad =  $assetsPath.'js/lazyload.js';
-        $cssMain = $assetsPath.'css/style.css';
+        $jsImgPicker =  ASSETS_URI.'js/imagepicker.js';
+        $jsLazyLoad =  ASSETS_URI.'js/lazyload.js';
+        $cssMain = ASSETS_URI.'css/style.css';
         ?>
         <script src="<?php print $jsImgPicker; ?>" type="text/javascript"></script>
         <script src="<?php print $jsLazyLoad; ?>" type="text/javascript"></script>

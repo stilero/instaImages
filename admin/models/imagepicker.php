@@ -1,17 +1,16 @@
   <?php
- defined('_JEXEC') or die('Restricted access');
 /**
-* @version		$Id:settings.php  1 2012-07-14 21:24:50Z  $
-* @package		Instaimages
-* @subpackage 	Models
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
+* Imagepicker Model
+*
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-maj-10 Stilero Webdesign http://www.stilero.com
+* @category Models
+* @license    GPLv2
 */
+ 
  defined('_JEXEC') or die('Restricted access');
-/**
- * InstaimagesModelSettings 
- * @author 
- */
+
  // Import the JModel class
 jimport( 'joomla.application.component.model' );
  

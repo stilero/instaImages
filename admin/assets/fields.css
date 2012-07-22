@@ -1,6 +1,12 @@
-
-/* -- FORM STYLES ----------------------------- */
-
+/**
+ * Admin styles for InstaImages component
+ *
+ * @version  1.0
+ * @version $Id$
+ * @author Daniel Eliasson (joomla at stilero.com)
+ * @copyright  (C) 2012-jul-15 Stilero Webdesign http://www.stilero.com
+ * @license	GPLv3 
+ */
 div.width-20 { width: 20%;}
 div.width-30 { width: 30%;}
 div.width-35 { width: 35%; }

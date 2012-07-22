@@ -1,12 +1,10 @@
 <?php
 /**
- * @version 0.1
- * @package    joomla
- * @subpackage Instaimages
- * @author	   	
- *  @copyright  	Copyright (C) 2012, . All rights reserved.
- *  @license 
- */
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-jul-10 Stilero Webdesign http://www.stilero.com
+* @license    GPLv2
+*/
 
 //--No direct access
 defined('_JEXEC') or die('Resrtricted Access');

@@ -1,4 +1,13 @@
 <?php
+/**
+* Settings form element
+*
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-maj-10 Stilero Webdesign http://www.stilero.com
+* @category Custom Form field
+* @license    GPLv2
+*/
 
 // No direct access
 defined('_JEXEC') or die;
@@ -19,6 +28,9 @@ class JElementSettings extends JElement
 		$db			= JFactory::getDbo();
 		$doc		= JFactory::getDocument();
 		$template	= $app->getTemplate();
+                $language = JFactory::getLanguage();
+                $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
+                $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
 		$fieldName	= $control_name.'['.$name.']';
 		$item = JTable::getInstance('settings', 'Table');
 		if ($value) {

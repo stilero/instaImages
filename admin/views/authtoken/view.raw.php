@@ -1,10 +1,10 @@
 <?php 
 /**
-* @version		$Id: view.html.php 111 2012-02-24 18:37:06Z michel $
-* @package		Instaimages
-* @subpackage 	Views
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-jul-10 Stilero Webdesign http://www.stilero.com
+* @category Views
+* @license    GPLv2
 */
 
 // no direct access
@@ -16,8 +16,9 @@ jimport('joomla.application.component.view');
 class InstaimagesViewAuthtoken  extends JView {
 
 	public function display($tpl = null){
-            $libPath = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_instaimages'.DS.'lib'.DS.'instaClass.php';
-            require_once $libPath;
+            define('LIB_PATH', JPATH_ADMINISTRATOR.DS.'components'.DS.'com_instaimages'.DS.'lib'.DS);
+            $instaClass = LIB_PATH.'instaClass.php';
+            require_once $instaClass;
             $app = &JFactory::getApplication('');
             /*
             $clientId = JRequest::getVar('client_id');

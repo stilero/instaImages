@@ -1,17 +1,15 @@
 <?php 
 /**
-* @version		$Id:Model.php 1 2012-07-14Z  $
-* @package		Instaimages
-* @subpackage 	Models
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
+* Model
+*
+* @version  1.0
+* @author Michael Liebler
+* @copyright  (C) 2012-maj-10 Stilero Webdesign http://www.stilero.com
+* @category Models
+* @license    GPLv2
 */
 // no direct access
 defined('_JEXEC') or die('Restricted access');
-/**
- * Model
- * @author Michael Liebler
- */
  
 jimport( 'joomla.application.component.model' );
 

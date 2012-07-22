@@ -1,11 +1,13 @@
 <?php
 /**
-* @version		$Id: default_controller.php 96 2011-08-11 06:59:32Z michel $
-* @package		Instaimages
-* @subpackage 	Controllers
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
-*/
+ * Settings controller for Instaimages
+ *
+ * @version  1.0
+ * @version $Id$
+ * @author Daniel Eliasson (joomla at stilero.com)
+ * @copyright  (C) 2012-jul-15 Stilero Webdesign http://www.stilero.com
+ * @license	GPLv3 
+ */
 
 // no direct access
 defined('_JEXEC') or die('Restricted access');

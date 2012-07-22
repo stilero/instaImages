@@ -1,10 +1,10 @@
 <?php 
 /**
-* @version		$Id: view.html.php 111 2012-02-24 18:37:06Z michel $
-* @package		Instaimages
-* @subpackage 	Views
-* @copyright	Copyright (C) 2012, . All rights reserved.
-* @license #
+* @version  1.0
+* @author Daniel Eliasson - joomla at stilero.com
+* @copyright  (C) 2012-jul-10 Stilero Webdesign http://www.stilero.com
+* @category Views
+* @license    GPLv2
 */
 
 // no direct access
@@ -21,11 +21,11 @@ class InstaimagesViewImagepicker  extends JView {
             $lang	= JFactory::getLanguage();
             $document =& JFactory::getDocument();
             JHtml::_('behavior.framework', true);
-            $assetsPath =  JURI::base().'components'.DS.'com_instaimages'.DS.'assets'.DS;
-            $jsPath =  $assetsPath.'js'.DS;
-            $cssPath =  $assetsPath.'css'.DS;
-            $document->addScript($jsPath.'imagepicker.js');
-            $document->addStyleSheet($cssPath.'style.css');
+            define('ASSETS_PATH', JURI::base().'components'.DS.'com_instaimages'.DS.'assets'.DS);
+            define('JS_PATH', ASSETS_PATH.'js'.DS);
+            define('CSS_PATH', ASSETS_PATH.'css'.DS);
+            $document->addScript(JS_PATH.'imagepicker.js');
+            $document->addStyleSheet(CSS_PATH.'style.css');
             $params = & JComponentHelper::getParams('com_instaimages');
             $accessToken = $params->get('access_token');
             if($accessToken == ""){
