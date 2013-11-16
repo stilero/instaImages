@@ -19,7 +19,7 @@ jimport('joomla.application.component.controller');
  * @package Instaimages   
  * @subpackage Controllers
  */
-class InstaimagesController extends JController
+class InstaimagesController extends JControllerLegacy
 {
 
 	protected $_viewname = 'item';

@@ -57,7 +57,7 @@ window.addEvent('domready', function(){
     };
     
     var handleResponse = function(response){
-        if(!$defined(response.access_token)){
+        if(response.access_token == undefined){
             var errormsg = '(' + response.code + ')' +
                 response.error_type + '\n' +
                 response.error_message;

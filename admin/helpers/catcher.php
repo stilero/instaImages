@@ -10,12 +10,23 @@
 */
 
 define( 'DS', DIRECTORY_SEPARATOR );
+$currentDirectory = dirname(__FILE__);
+$dirParts = explode(DS, $currentDirectory);
+$reversedParts = array_reverse($dirParts);
+$newDirs = array();
+for($i=4;$i<count($reversedParts);$i++){
+    $newDirs[] = $reversedParts[$i];
+}
+$revNewDirs = array_reverse($newDirs);
+$basePath = implode(DS, $revNewDirs);
+
 define('_JEXEC', 1);
 if (!defined('JPATH_BASE')){
-    define('JPATH_BASE', '..'.DS.'..'.DS.'..'.DS.'..');
+    define('JPATH_BASE', $basePath);
 }
+
 define('JPATH_LIBRARIES', JPATH_BASE . DS . 'libraries');
-require_once JPATH_LIBRARIES . DS . 'import.php';
+require_once JPATH_LIBRARIES . DS . 'import.legacy.php';
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 

@@ -15,7 +15,7 @@ jimport( 'joomla.application.component.model' );
 
 require_once(JPATH_COMPONENT_ADMINISTRATOR.DS.'helpers'.DS.'query.php');
  
-class InstaimagesModel  extends JModel { 
+class InstaimagesModel  extends JModelLegacy { 
 
   
 	/**

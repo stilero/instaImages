@@ -14,7 +14,7 @@
  // Import the JModel class
 jimport( 'joomla.application.component.model' );
  
-class InstaimagesModelImagepicker  extends JModel { 
+class InstaimagesModelImagepicker  extends JModelLegacy { 
 
 	
 	protected $_access_token = null;

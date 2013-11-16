@@ -16,7 +16,7 @@
  // Import the JModel class
 jimport( 'joomla.application.component.model' );
  
-class InstaimagesModelRecentimages  extends JModel { 
+class InstaimagesModelRecentimages  extends JModelLegacy { 
 
 	
 	protected $_access_token = null;
@@ -144,7 +144,7 @@ class InstaimagesModelRecentimages  extends JModel {
             $accessToken = $this->_access_token;
             $config = array();
             require_once JPATH_COMPONENT_ADMINISTRATOR.DS.'lib'.DS.'instaClass.php';
-            $Instagram = new instaClass($clientId, $clientSecret, '', $accessToken, $config);
+            $Instagram = new instaClass($clientID, $clientSecret, '', $accessToken, $config);
             $images = $Instagram->fetchImages($userID, $imageCount, $displayType, $postParams);
             return $images;
         }

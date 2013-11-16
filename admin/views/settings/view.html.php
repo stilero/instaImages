@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.view');
 
  
-class InstaimagesViewSettings  extends JView {
+class InstaimagesViewSettings  extends JViewLegacy {
 
 	public function display($tpl = null) 
 	{

@@ -1,5 +1,5 @@
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD component 1.0//EN" "http://joomla.org/xml/dtd/1.5/component-install.dtd">
-<install type="component" method="upgrade" version="1.5.0">
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="2.5">
     <name>Instaimages</name>
     <creationDate>2012-07-14</creationDate>
     <author>Daniel Eliasson Stilero Webdesign</author>
@@ -7,7 +7,7 @@
     <authorUrl>http://www.stilero.com</authorUrl>
     <copyright>Copyright (C) 2012 Daniel Eliasson Stilero Webdesign. All rights reserved.</copyright>	
     <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-    <version>0.1</version>
+    <version>1.1</version>
     <description>A component for adding Instagram images to Joomla articles</description>
     <media destination="instaimages" folder="media/instaimages">
         <folder>assets</folder>
@@ -26,7 +26,7 @@
             -->
             <files folder="admin">
                 <filename>config.xml</filename>
-                <filename>admin.instaimages.php</filename>
+                <filename>instaimages.php</filename>
                 <filename>controller.php</filename>
                 <filename>index.html</filename>
                 <filename>access.xml</filename>			
@@ -43,4 +43,4 @@
             <language tag="en-GB">en-GB.com_instaimages.sys.ini</language>
         </languages>		
     </administration>
-</install>
+</extension>

@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.view');
  
  
-class InstaimagesViewAuthtoken  extends JView {
+class InstaimagesViewAuthtoken  extends JViewLegacy {
 
 	public function display($tpl = null){
             define('LIB_PATH', JPATH_ADMINISTRATOR.DS.'components'.DS.'com_instaimages'.DS.'lib'.DS);
