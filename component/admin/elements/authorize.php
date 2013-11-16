@@ -41,8 +41,8 @@ if(version_compare(JVERSION, '1.6.0', '<')){
 
         protected function getInput(){
             JHTML::_('behavior.modal', 'a.lightbox');
-            $document =& JFactory::getDocument();
-            $language =& JFactory::getLanguage();
+            $document = JFactory::getDocument();
+            $language = JFactory::getLanguage();
             $language->load('com_instaimages', JPATH_ADMINISTRATOR, 'en-GB', true);
             $language->load('com_instaimages', JPATH_ADMINISTRATOR, null, true);
             $assetsPath = JURI::root(true).'/administrator/components/com_instaimages/assets/';
@@ -79,7 +79,7 @@ if(version_compare(JVERSION, '1.6.0', '<')){
         }
         */
         private function addTranslationJS(){
-            $document =& JFactory::getDocument();
+            $document = JFactory::getDocument();
             $jsTranslationStrings = 'var COM_INSTAIMAGES_JS_SUCCESS = "'.JText::_('App Connected to Instagram. Save to Complete Settings.').'";';
             $jsTranslationStrings .= 'var COM_INSTAIMAGES_JS_FAILURE = "'.JText::_('Instagram Authorization failed with the following error').'";';
             $document->addScriptDeclaration($jsTranslationStrings);        
@@ -93,7 +93,7 @@ if(version_compare(JVERSION, '1.6.0', '<')){
                     '<a '.
                     'id="'.$id.'" '.
                     'title="'.JText::_('Authorize App').'" '.
-                    'href="'.$link.'" '.
+                    'href="#" '.
                     'target="_blank" >'.
                     '<img src="'.$buttonImage.'" />'.
                     '</a>'.

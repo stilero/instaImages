@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="editors-xtd">
+	<name>Button - InstaImages</name>
+	<author>Daniel Eliasson - joomla at stilero.com</author>
+	<creationDate>2012-jul-15</creationDate>
+	<copyright>Copyright (c) 2012-jul-15 Stilero Webdesign http://www.stilero.com. All rights reserved.</copyright>
+	<authorEmail>joomla@stilero.com</authorEmail>
+	<authorUrl>www.stilero.com</authorUrl>
+	<version>1.0</version>
+	<license>GPLv2</license>
+	<description>PLG_EDITORS-XTD_INSTAIMAGES_DESCRIPTION</description>
+        <scriptfile>install.script.php</scriptfile>
+	<files>
+            <filename plugin="instaimages">instaimages.php</filename>
+            <filename>index.html</filename>
+	</files>
+	<languages folder="language">
+            <language tag="en-GB">en-GB.plg_editors-xtd_instaimages.ini</language>
+            <language tag="en-GB">en-GB.plg_editors-xtd_instaimages.sys.ini</language>
+        </languages>
+</extension>

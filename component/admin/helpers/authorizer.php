@@ -1,6 +1,6 @@
 <?php
 /**
-* Catcher Helper
+* Authorizer Helper
 *
 * @version  1.0
 * @author Daniel Eliasson - joomla at stilero.com
@@ -26,26 +26,27 @@ if (!defined('JPATH_BASE')){
 }
 
 define('JPATH_LIBRARIES', JPATH_BASE . DS . 'libraries');
-require_once JPATH_LIBRARIES . DS . 'import.legacy.php';
+if(file_exists(JPATH_LIBRARIES . DS . 'import.legacy.php')){
+    require_once JPATH_LIBRARIES . DS . 'import.legacy.php';
+}else{
+    require_once JPATH_LIBRARIES . DS . 'import.php';
+}
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-$code = JRequest::getVar('code');
-?>
-<html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            window.addEvent('domready', function(){
-                var code = $('catchcode').get('text');
-                window.opener.$('jform_auth_code').value = code;
-                window.opener.$('jform_auth_code').fireEvent('change');
-                window.close();
-            });
-        </script>
-    </head>
-    <body bgcolor="#FFFFFF">
-        <div id="catchcode"><?php echo $code; ?></div>
-    </body>
-</html>
+require_once JPATH_BASE . DS .'administrator'.DS.'components'.DS.'com_instaimages' .DS.'lib'.DS.'instaClass.php';
 
+
+
+$clientId = JRequest::getVar('client_id');
+$clientSecret = JRequest::getVar('client_secret');
+$authCode = JRequest::getVar('code');
+$redirectURI = JRequest::getVar('redirect_uri');
+ 
+$config = array(
+    'redirectURI'   =>  $redirectURI
+);
+$instagram = new instaClass($clientId, $clientSecret, $authCode,'', $config);
+$token  = $instagram->requestAccessToken($authCode);
+print $token;
+?>

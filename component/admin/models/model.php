@@ -89,7 +89,7 @@ class InstaimagesModel  extends JModelLegacy {
 	{
 		parent::__construct();
 		
-		$app = &JFactory::getApplication('administrator');
+		$app = JFactory::getApplication('administrator');
 			// Guess the option from the class name (Option)Model(View).
 		if (empty($this->option)) {
 			$r = null;
@@ -191,7 +191,7 @@ class InstaimagesModel  extends JModelLegacy {
 		}
  
 		// Initialize variables.
-		$app = &JFactory::getApplication();
+		$app = JFactory::getApplication();
 
 		// Get the form.
 		
@@ -267,7 +267,7 @@ class InstaimagesModel  extends JModelLegacy {
 	
 	public function getItem() 
 	{			
-		$item = & $this->getTable();				
+		$item =  $this->getTable();				
 		$item->load($this->_id);
 		if (isset($item->params)) {					
 			$params = json_decode($item->params);					
@@ -288,7 +288,7 @@ class InstaimagesModel  extends JModelLegacy {
     */
      public function  delete($cid) 
      {
-        $db = & JFactory::getDBO();     
+        $db =  JFactory::getDBO();     
 	    $query = 'DELETE FROM '.$this->_default_table.' WHERE id '.$this->_multiDbCondIfArray($cid);
         $db->setQuery( $query);
 

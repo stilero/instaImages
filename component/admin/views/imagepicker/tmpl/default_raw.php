@@ -17,7 +17,7 @@ define('ASSETS_URI', JURI::root( true ).'/administrator/components/com_instaimag
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js" type="text/javascript"></script>
         <?php
-        $document =& JFactory::getDocument();
+        $document = JFactory::getDocument();
         //JHtml::_('behavior.framework', true);
         $jsImgPicker =  ASSETS_URI.'js'.DS.'imagepicker.js';
         $jsLazyLoad =  ASSETS_URI.'js'.DS.'lazyload.js';

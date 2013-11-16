@@ -49,7 +49,7 @@ if(version_compare(JVERSION, '1.6.0', '<')){
             $htmlCode = 
                     '<div class="width-100 fltlft">'.
                     '<div class="blank">'.
-                    '<a id="'.$this->id.'"'.$class.' target="_blank"'.$handler.' href="'.$instagramURI.'" title="'.$linktext.'">'.
+                    '<a id="'.$this->id.'" target="_blank" href="'.$instagramURI.'" title="'.$linktext.'">'.
                         $linktext.
                     '</a>'.
                     '</div>'.

@@ -28,7 +28,7 @@ class InstaimagesModelImagepicker  extends JModelLegacy {
 	public function __construct()
 	{
 		parent::__construct();
-                $params = & JComponentHelper::getParams('com_instaimages');
+                $params = JComponentHelper::getParams('com_instaimages');
                 $this->_access_token = $params->get('access_token');
                 $this->_client_id = $params->get('client_id');
                 $this->_client_secret = $params->get('client_secret');
@@ -95,7 +95,7 @@ class InstaimagesModelImagepicker  extends JModelLegacy {
 	
 	protected function _buildContentOrderBy() 
 	{
-		$app = &JFactory::getApplication('');
+		$app = JFactory::getApplication('');
 		$context			= $this->option.'.'.strtolower($this->getName()).'.list.';
 		$filter_order = $app ->getUserStateFromRequest($context . 'filter_order', 'filter_order', $this->getDefaultFilter(), 'cmd');
 		$filter_order_Dir = $app ->getUserStateFromRequest($context . 'filter_order_Dir', 'filter_order_Dir', '', 'word');
@@ -112,7 +112,7 @@ class InstaimagesModelImagepicker  extends JModelLegacy {
 	protected function _buildContentWhere() 
 	{
 		
-		$app = &JFactory::getApplication('');
+		$app = JFactory::getApplication('');
 		$context			= $this->option.'.'.strtolower($this->getName()).'.list.';		
 		$filter_state = $app ->getUserStateFromRequest($context . 'filter_state', 'filter_state', '', 'word');		
 		$filter_order = $app ->getUserStateFromRequest($context . 'filter_order', 'filter_order', $this->getDefaultFilter(), 'cmd');
@@ -142,8 +142,8 @@ class InstaimagesModelImagepicker  extends JModelLegacy {
             $accessToken = $this->_access_token;
             $config = array();
             require_once JPATH_COMPONENT_ADMINISTRATOR.DS.'lib'.DS.'instaClass.php';
-            $Instagram = new instaClass($clientId, $clientSecret, '', $accessToken, $config);
-            $images = $Instagram->fetchImages($userID, $imageCount, $displayType, $postParams);
+            $Instagram = new instaClass($clientID, $clientSecret, '', $accessToken, $config);
+            $images = $Instagram->fetchImages($userID, $imageCount, $displayType);
             return $images;
         }
 	

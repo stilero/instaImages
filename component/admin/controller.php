@@ -45,8 +45,7 @@ class InstaimagesController extends JControllerLegacy
 	/*
 	 * Overloaded Method display
 	 */
-	function display() 
-	{
+	public function display($cachable = false, $urlparams = false){
 
 		switch($this->getTask())
 		{

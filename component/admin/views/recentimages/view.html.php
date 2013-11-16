@@ -17,9 +17,9 @@ class InstaimagesViewRecentimages  extends JViewLegacy {
 
 	public function display($tpl = null) 
 	{
-            $app = &JFactory::getApplication('');
+            $app = JFactory::getApplication('');
             $lang	= JFactory::getLanguage();
-            $document =& JFactory::getDocument();
+            $document = JFactory::getDocument();
             JHtml::_('behavior.framework');
             JHtml::_('behavior.framework', true);
             define('ASSETS_URI', JURI::root( true ).'/administrator/components/com_instaimages/assets/');
@@ -27,12 +27,12 @@ class InstaimagesViewRecentimages  extends JViewLegacy {
             $cssMain = ASSETS_URI.'css/style.css';
             $document->addScript($jsLazyLoad);
             $document->addStyleSheet($cssMain);
-            $params = & JComponentHelper::getParams('com_instaimages');
+            $params =  JComponentHelper::getParams('com_instaimages');
             $accessToken = $params->get('access_token');
             if($accessToken == ""){
                 parent::display('error');
             }
-            $images = & $this->get('UserImages');
+            $images =  $this->get('UserImages');
             $this->assignRef( 'images', $images);
             parent::display();
 	}

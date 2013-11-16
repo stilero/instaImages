@@ -18,10 +18,10 @@ class InstaimagesViewImagepicker  extends JViewLegacy {
 
 	public function display($tpl = null) 
 	{
-            $app = &JFactory::getApplication('');
+            $app = JFactory::getApplication('');
             $lang	= JFactory::getLanguage();
-            $params = & JComponentHelper::getParams('com_instaimages');
-            $images = & $this->get('UserImages');
+            $params = JComponentHelper::getParams('com_instaimages');
+            $images = $this->get('UserImages');
             $this->assignRef( 'images', $images);
             parent::display('raw');
 	}

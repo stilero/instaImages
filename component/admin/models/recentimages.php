@@ -30,7 +30,7 @@ class InstaimagesModelRecentimages  extends JModelLegacy {
 	public function __construct()
 	{
 		parent::__construct();
-                $params = & JComponentHelper::getParams('com_instaimages');
+                $params = JComponentHelper::getParams('com_instaimages');
                 $this->_access_token = $params->get('access_token');
                 $this->_client_id = $params->get('client_id');
                 $this->_client_secret = $params->get('client_secret');
@@ -145,7 +145,7 @@ class InstaimagesModelRecentimages  extends JModelLegacy {
             $config = array();
             require_once JPATH_COMPONENT_ADMINISTRATOR.DS.'lib'.DS.'instaClass.php';
             $Instagram = new instaClass($clientID, $clientSecret, '', $accessToken, $config);
-            $images = $Instagram->fetchImages($userID, $imageCount, $displayType, $postParams);
+            $images = $Instagram->fetchImages($userID, $imageCount, $displayType);
             return $images;
         }
 	
