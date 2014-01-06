@@ -8,6 +8,9 @@
 
 //--No direct access
 defined('_JEXEC') or die('Resrtricted Access');
+if(!defined('DS')){
+    define('DS',DIRECTORY_SEPARATOR);
+}
 // Require the base controller
 require_once( JPATH_COMPONENT.DS.'controller.php' );
 
